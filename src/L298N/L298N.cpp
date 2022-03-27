@@ -8,7 +8,29 @@ MotorDriver::~MotorDriver()
 {
 }
 
-void MotorDriver::init()
+void MotorDriver::stop(unsigned long ms)
 {
-    speed = 10;
+    digitalWrite(rightMotorPin1, LOW);
+    digitalWrite(rightMotorPin2, LOW);
+    digitalWrite(leftMotorPin1,  LOW);
+    digitalWrite(leftMotorPin2,  LOW);
+    delay(ms);
+}
+
+void MotorDriver::forward(unsigned long ms)
+{
+    digitalWrite(rightMotorPin1, HIGH);
+    digitalWrite(rightMotorPin2, LOW);
+    digitalWrite(leftMotorPin1,  HIGH);
+    digitalWrite(leftMotorPin2,  LOW);
+    delay(ms);
+}
+
+void MotorDriver::backward(unsigned long ms)
+{
+    digitalWrite(rightMotorPin1, LOW);
+    digitalWrite(rightMotorPin2, HIGH);
+    digitalWrite(leftMotorPin1,  LOW);
+    digitalWrite(leftMotorPin2,  HIGH);
+    delay(ms);
 }

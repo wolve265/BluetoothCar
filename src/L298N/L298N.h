@@ -1,6 +1,12 @@
 #ifndef L298N_H
 #define L298N_H
 
+typedef enum Direction{
+    FORWARD,
+    STOP,
+    BACKWARD
+} Direction;
+
 class MotorDriver
 {
 private:
@@ -8,16 +14,16 @@ private:
     const int rightMotorPin2 = 9;
     const int leftMotorPin1  = 10;
     const int leftMotorPin2  = 11;
-    int leftMotorSpeed = 100;
-    int rightMotorSpeed = 100;
+    void use_right(Direction direction);
+    void use_left(Direction direction);
 public:
     MotorDriver();
     ~MotorDriver();
     void stop(unsigned long ms);
     void forward(unsigned long ms);
     void backward(unsigned long ms);
-    void left(unsigned long ms);
     void right(unsigned long ms);
+    void left(unsigned long ms);
 };
 
 #endif

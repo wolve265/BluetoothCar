@@ -12,10 +12,18 @@ private:
     unsigned int _pinPlus;
     unsigned int _pinMinus;
 
+    float _compensateFactor;
     int _currentSpeed;
 
 public:
-    L298NMotorDriver(bool isDebugOn, bool isEnabled, unsigned int pinEnable, unsigned int pinPlus, unsigned int pinMinus);
+    L298NMotorDriver(
+        bool isDebugOn,
+        bool isEnabled,
+        unsigned int pinEnable,
+        unsigned int pinPlus,
+        unsigned int pinMinus,
+        float compensateFactor
+        );
     ~L298NMotorDriver();
 
     void SetSpeed(int speed);

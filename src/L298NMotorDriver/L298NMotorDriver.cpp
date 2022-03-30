@@ -1,10 +1,18 @@
 #include "L298NMotorDriver.h"
 
-L298NMotorDriver::L298NMotorDriver(bool isDebugOn, bool isEnabled, unsigned int pinEnable, unsigned int pinPlus, unsigned int pinMinus) : Driver(isDebugOn, isEnabled)
+L298NMotorDriver::L298NMotorDriver(
+    bool isDebugOn,
+    bool isEnabled,
+    unsigned int pinEnable,
+    unsigned int pinPlus,
+    unsigned int pinMinus,
+    float compensateFactor
+    ) : Driver(isDebugOn, isEnabled)
 {
     _pinEnable = pinEnable;
     _pinPlus = pinPlus;
     _pinMinus = pinMinus;
+    _compensateFactor = compensateFactor;
 }
 
 L298NMotorDriver::~L298NMotorDriver()
@@ -29,7 +37,7 @@ void L298NMotorDriver::SetSpeed(int speed)
     {
         if (speed > 0)
         {
-            analogWrite(_pinEnable, speed);
+            analogWrite(_pinEnable, int(speed * _compensateFactor));
             digitalWrite(_pinPlus, HIGH);
             digitalWrite(_pinMinus, LOW);
         }
@@ -41,7 +49,7 @@ void L298NMotorDriver::SetSpeed(int speed)
         }
         else
         {
-            analogWrite(_pinEnable, -speed);
+            analogWrite(_pinEnable, int(-speed * _compensateFactor));
             digitalWrite(_pinPlus, LOW);
             digitalWrite(_pinMinus, HIGH);
         }

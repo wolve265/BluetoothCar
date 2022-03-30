@@ -7,10 +7,16 @@ void setup() {
 }
 
 void loop() {
-    rightMotorDriver.SetSpeed(250);
-    leftMotorDriver.SetSpeed(250);
+    rightMotorDriver.SetSpeed(150);
+    leftMotorDriver.SetSpeed(150);
     delay(2000);
-    rightMotorDriver.SetSpeed(-250);
-    leftMotorDriver.SetSpeed(-250);
+    rightMotorDriver.SetSpeed(0);
+    leftMotorDriver.SetSpeed(0);
+    delay(5000);
+    rightMotorDriver.SetSpeed(-150);
+    leftMotorDriver.SetSpeed(-150);
     delay(2000);
+    rightMotorDriver.SetSpeed(0);
+    leftMotorDriver.SetSpeed(0);
+    delay(5000);
 }

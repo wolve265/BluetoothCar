@@ -9,6 +9,7 @@ class HC06BluetoothTransceiver : public Driver
 private:
     unsigned int _pinTX;
     unsigned int _pinRX;
+    SoftwareSerial _swSerial;
 public:
     HC06BluetoothTransceiver(
         bool isDebugOn,
@@ -17,7 +18,11 @@ public:
         unsigned int pinRX
         );
     ~HC06BluetoothTransceiver();
-    SoftwareSerial serial;
+
+    int available();
+    void begin(long speed);
+    int read();
+    size_t write(uint8_t byte);
 };
 
 #endif

@@ -2,17 +2,28 @@
 
 void setup() {
     Serial.begin(9600);
-    Serial.println("Enter AT Commands");
-    bluetoothTrasceiver.serial.begin(9600);
 }
 
 void loop() {
-    if (bluetoothTrasceiver.serial.available())
+    if (bluetoothTrasceiver.available())
     {
-        Serial.write(bluetoothTrasceiver.serial.read());
+        int read_val = bluetoothTrasceiver.read();
+        switch (read_val)
+        {
+        case 'W':
+            Serial.println("W pressed");
+            break;
+
+        case 'S':
+            Serial.println("S pressed");
+            break;
+
+        default:
+            break;
+        }
     }
     if (Serial.available())
     {
-        bluetoothTrasceiver.serial.write(Serial.read());
+        bluetoothTrasceiver.write(Serial.read());
     }
 }

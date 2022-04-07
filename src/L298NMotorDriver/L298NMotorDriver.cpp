@@ -29,7 +29,7 @@ void L298NMotorDriver::SetSpeed(int speed)
 
     if (IsDebugOn())
     {
-        Serial.print(F("L298NMotorDriver: speed:"));
+        Serial.print(F("L298NMotorDriver: speed: "));
         Serial.println(speed);
     }
 

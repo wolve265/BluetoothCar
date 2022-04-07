@@ -19,7 +19,7 @@ void SimpleSteering::forward(int speed)
 {
     if (IsDebugOn())
     {
-        Serial.print(F("SimpleSteering: forward with speed:"));
+        Serial.print(F("SimpleSteering: forward with speed: "));
         Serial.println(speed);
     }
 
@@ -31,7 +31,7 @@ void SimpleSteering::backward(int speed)
 {
     if (IsDebugOn())
     {
-        Serial.print(F("SimpleSteering: forward with speed:"));
+        Serial.print(F("SimpleSteering: backward with speed: "));
         Serial.println(speed);
     }
 
@@ -43,7 +43,7 @@ void SimpleSteering::turn_right(int speed)
 {
     if (IsDebugOn())
     {
-        Serial.print(F("SimpleSteering: forward with speed:"));
+        Serial.print(F("SimpleSteering: turning right with speed: "));
         Serial.println(speed);
     }
 
@@ -56,7 +56,7 @@ void SimpleSteering::turn_left(int speed)
 {
     if (IsDebugOn())
     {
-        Serial.print(F("SimpleSteering: forward with speed:"));
+        Serial.print(F("SimpleSteering: turning left with speed: "));
         Serial.println(speed);
     }
 

@@ -23,7 +23,7 @@
 #include "src/SimpleSteering/SimpleSteering.h"
 #include "src/SimpleSteering/SimpleSteering.cpp"
 
-HC06BluetoothTransceiver bluetoothTrasceiver(true, true, HC06_TX, HC06_RX);
+HC06BluetoothTransceiver bluetoothTransceiver(true, true, HC06_TX, HC06_RX);
 L298NMotorDriver rightMotorDriver(true, true, L298N_ENA, L298N_IN1, L298N_IN2, RIGHT_MOTOR_COMPENSATE_FACTOR);
 L298NMotorDriver leftMotorDriver(true, true, L298N_ENB, L298N_IN3, L298N_IN4, LEFT_MOTOR_COMPENSATE_FACTOR);
 SimpleSteering simpleSteering(true, true, &rightMotorDriver, &leftMotorDriver);

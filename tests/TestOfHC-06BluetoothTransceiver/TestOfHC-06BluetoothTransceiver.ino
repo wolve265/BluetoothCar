@@ -5,9 +5,9 @@ void setup() {
 }
 
 void loop() {
-    if (bluetoothTrasceiver.available())
+    if (bluetoothTransceiver.available())
     {
-        int read_val = bluetoothTrasceiver.read();
+        int read_val = bluetoothTransceiver.read();
         switch (read_val)
         {
         case 'W':
@@ -24,6 +24,6 @@ void loop() {
     }
     if (Serial.available())
     {
-        bluetoothTrasceiver.write(Serial.read());
+        bluetoothTransceiver.write(Serial.read());
     }
 }

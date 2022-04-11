@@ -20,6 +20,8 @@
 #define RIGHT_MOTOR_COMPENSATE_FACTOR 1
 #define LEFT_MOTOR_COMPENSATE_FACTOR 1
 
+#include "src/BluetoothSteering/BluetoothSteering.h"
+#include "src/BluetoothSteering/BluetoothSteering.cpp"
 #include "src/CommandDecoder/CommandDecoder.h"
 #include "src/CommandDecoder/CommandDecoder.cpp"
 #include "src/Driver/Driver.h"
@@ -35,6 +37,7 @@ HC06BluetoothTransceiver bluetoothTransceiver(DEBUG_OFF, ENABLED, HC06_TX, HC06_
 CommandDecoder commandDecoder(DEBUG_OFF, ENABLED, &bluetoothTransceiver);
 L298NMotorDriver rightMotorDriver(DEBUG_OFF, ENABLED, L298N_ENB, L298N_IN3, L298N_IN4, RIGHT_MOTOR_COMPENSATE_FACTOR);
 L298NMotorDriver leftMotorDriver(DEBUG_OFF, ENABLED, L298N_ENA, L298N_IN1, L298N_IN2, LEFT_MOTOR_COMPENSATE_FACTOR);
-SimpleSteering simpleSteering(DEBUG_OFF, ENABLED, &rightMotorDriver, &leftMotorDriver);
+SimpleSteering simpleSteering(DEBUG_OFF, DISABLED, &rightMotorDriver, &leftMotorDriver);
+BluetoothSteering bluetoothSteering(DEBUG_OFF, ENABLED, &rightMotorDriver, &leftMotorDriver, &commandDecoder);
 
 #endif

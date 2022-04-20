@@ -1,5 +1,5 @@
 # BluetoothCar
-University project of car controlled by the mobile app via Bluetooth
+University project of a car controlled by the mobile app via Bluetooth
 
 ## L298N Motor Driver
 
@@ -13,3 +13,9 @@ This driver controls two TT motors.
 We are using HC-06 Bluetooth Transceiver.
 
 ![HC-06 Connection](doc/img/arduino_hc06.png)
+
+## App
+
+We are using [Bluetooth RC Car mobile app](https://play.google.com/store/apps/details?id=braulio.calle.bluetoothRCcontroller&hl=pl&gl=US).
+
+![App Preview](doc/img/app.png)

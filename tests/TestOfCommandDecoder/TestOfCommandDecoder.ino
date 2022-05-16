@@ -13,13 +13,13 @@ void loop() {
         simpleSteering.forward(150);
         break;
     case BACK:
-        simpleSteering.backward(150);
+        simpleSteering.back(150);
         break;
     case LEFT:
-        simpleSteering.turn_left(150);
+        simpleSteering.left(150);
         break;
     case RIGHT:
-        simpleSteering.turn_right(150);
+        simpleSteering.right(150);
         break;
 
     default:

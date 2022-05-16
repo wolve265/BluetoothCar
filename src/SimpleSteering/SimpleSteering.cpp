@@ -27,11 +27,11 @@ void SimpleSteering::forward(int speed)
     _leftMotorDriver->SetSpeed(speed);
 }
 
-void SimpleSteering::backward(int speed)
+void SimpleSteering::back(int speed)
 {
     if (IsDebugOn())
     {
-        Serial.print(F("SimpleSteering: backward with speed: "));
+        Serial.print(F("SimpleSteering: back with speed: "));
         Serial.println(speed);
     }
 
@@ -39,11 +39,11 @@ void SimpleSteering::backward(int speed)
     _leftMotorDriver->SetSpeed(-speed);
 }
 
-void SimpleSteering::turn_right(int speed)
+void SimpleSteering::right(int speed)
 {
     if (IsDebugOn())
     {
-        Serial.print(F("SimpleSteering: turning right with speed: "));
+        Serial.print(F("SimpleSteering: right with speed: "));
         Serial.println(speed);
     }
 
@@ -52,15 +52,72 @@ void SimpleSteering::turn_right(int speed)
 
 }
 
-void SimpleSteering::turn_left(int speed)
+void SimpleSteering::left(int speed)
 {
     if (IsDebugOn())
     {
-        Serial.print(F("SimpleSteering: turning left with speed: "));
+        Serial.print(F("SimpleSteering: left with speed: "));
         Serial.println(speed);
     }
 
     _rightMotorDriver->SetSpeed(speed);
     _leftMotorDriver->SetSpeed(-speed);
 
+}
+
+void SimpleSteering::forward_right(int speed)
+{
+    if (IsDebugOn())
+    {
+        Serial.print(F("SimpleSteering: forward right with speed: "));
+        Serial.println(speed);
+    }
+
+    _rightMotorDriver->SetSpeed(speed - _turnSpeedDifference);
+    _leftMotorDriver->SetSpeed(speed);
+
+}
+
+void SimpleSteering::forward_left(int speed)
+{
+    if (IsDebugOn())
+    {
+        Serial.print(F("SimpleSteering: forward left with speed: "));
+        Serial.println(speed);
+    }
+
+    _rightMotorDriver->SetSpeed(speed);
+    _leftMotorDriver->SetSpeed(speed - _turnSpeedDifference);
+
+}
+
+void SimpleSteering::back_right(int speed)
+{
+    if (IsDebugOn())
+    {
+        Serial.print(F("SimpleSteering: back right with speed: "));
+        Serial.println(speed);
+    }
+
+    _rightMotorDriver->SetSpeed(-speed + _turnSpeedDifference);
+    _leftMotorDriver->SetSpeed(-speed);
+
+}
+
+void SimpleSteering::back_left(int speed)
+{
+    if (IsDebugOn())
+    {
+        Serial.print(F("SimpleSteering: back left with speed: "));
+        Serial.println(speed);
+    }
+
+    _rightMotorDriver->SetSpeed(-speed);
+    _leftMotorDriver->SetSpeed(-speed + _turnSpeedDifference);
+
+}
+
+void SimpleSteering::stop()
+{
+    this->forward(0);
 }

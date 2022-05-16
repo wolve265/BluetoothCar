@@ -10,15 +10,15 @@
 #define HC06_TX 13
 #define HC06_RX 8
 
-#define L298N_ENA 2
-#define L298N_IN1 3
+#define L298N_ENA 3
+#define L298N_IN1 2
 #define L298N_IN2 4
 #define L298N_IN3 5
-#define L298N_IN4 6
-#define L298N_ENB 7
+#define L298N_IN4 7
+#define L298N_ENB 6
 
-#define RIGHT_MOTOR_COMPENSATE_FACTOR 1
-#define LEFT_MOTOR_COMPENSATE_FACTOR 1
+#define RIGHT_MOTOR_COMPENSATE_FACTOR 1.1
+#define LEFT_MOTOR_COMPENSATE_FACTOR 0.9
 
 #include "src/BluetoothSteering/BluetoothSteering.h"
 #include "src/BluetoothSteering/BluetoothSteering.cpp"
@@ -33,11 +33,11 @@
 #include "src/SimpleSteering/SimpleSteering.h"
 #include "src/SimpleSteering/SimpleSteering.cpp"
 
-HC06BluetoothTransceiver bluetoothTransceiver(DEBUG_OFF, ENABLED, HC06_TX, HC06_RX);
-CommandDecoder commandDecoder(DEBUG_OFF, ENABLED, &bluetoothTransceiver);
-L298NMotorDriver rightMotorDriver(DEBUG_OFF, ENABLED, L298N_ENB, L298N_IN3, L298N_IN4, RIGHT_MOTOR_COMPENSATE_FACTOR);
-L298NMotorDriver leftMotorDriver(DEBUG_OFF, ENABLED, L298N_ENA, L298N_IN1, L298N_IN2, LEFT_MOTOR_COMPENSATE_FACTOR);
-SimpleSteering simpleSteering(DEBUG_OFF, DISABLED, &rightMotorDriver, &leftMotorDriver);
-BluetoothSteering bluetoothSteering(DEBUG_OFF, ENABLED, &rightMotorDriver, &leftMotorDriver, &commandDecoder);
+HC06BluetoothTransceiver    bluetoothTransceiver(DEBUG_OFF, ENABLED, HC06_TX, HC06_RX);
+CommandDecoder              commandDecoder      (DEBUG_OFF, ENABLED, &bluetoothTransceiver);
+L298NMotorDriver            rightMotorDriver    (DEBUG_OFF, ENABLED, L298N_ENB, L298N_IN3, L298N_IN4, RIGHT_MOTOR_COMPENSATE_FACTOR);
+L298NMotorDriver            leftMotorDriver     (DEBUG_OFF, ENABLED, L298N_ENA, L298N_IN1, L298N_IN2, LEFT_MOTOR_COMPENSATE_FACTOR);
+SimpleSteering              simpleSteering      (DEBUG_OFF, DISABLED, &rightMotorDriver, &leftMotorDriver);
+BluetoothSteering           bluetoothSteering   (DEBUG_OFF, ENABLED, &rightMotorDriver, &leftMotorDriver, &commandDecoder);
 
 #endif

@@ -7,7 +7,7 @@
 class SimpleSteering : public Driver
 {
 private:
-    int _turnSpeedDifference = 50;
+    int _turnSpeedDifference = 100;
     L298NMotorDriver* _rightMotorDriver;
     L298NMotorDriver* _leftMotorDriver;
 public:

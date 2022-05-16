@@ -10,15 +10,15 @@
 #define HC06_TX 13
 #define HC06_RX 8
 
-#define L298N_ENA 2
-#define L298N_IN1 3
+#define L298N_ENA 3
+#define L298N_IN1 2
 #define L298N_IN2 4
 #define L298N_IN3 5
-#define L298N_IN4 6
-#define L298N_ENB 7
+#define L298N_IN4 7
+#define L298N_ENB 6
 
-#define RIGHT_MOTOR_COMPENSATE_FACTOR 1
-#define LEFT_MOTOR_COMPENSATE_FACTOR 1
+#define RIGHT_MOTOR_COMPENSATE_FACTOR 1.1
+#define LEFT_MOTOR_COMPENSATE_FACTOR 0.9
 
 #include "src/BluetoothSteering/BluetoothSteering.h"
 #include "src/BluetoothSteering/BluetoothSteering.cpp"

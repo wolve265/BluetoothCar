@@ -99,8 +99,8 @@ void SimpleSteering::back_right(int speed)
         Serial.println(speed);
     }
 
-    _rightMotorDriver->SetSpeed(-speed);
-    _leftMotorDriver->SetSpeed(-speed + _turnSpeedDifference);
+    _rightMotorDriver->SetSpeed(-speed + _turnSpeedDifference);
+    _leftMotorDriver->SetSpeed(-speed);
 
 }
 
@@ -112,8 +112,8 @@ void SimpleSteering::back_left(int speed)
         Serial.println(speed);
     }
 
-    _rightMotorDriver->SetSpeed(-speed + _turnSpeedDifference);
-    _leftMotorDriver->SetSpeed(-speed);
+    _rightMotorDriver->SetSpeed(-speed);
+    _leftMotorDriver->SetSpeed(-speed + _turnSpeedDifference);
 
 }
 

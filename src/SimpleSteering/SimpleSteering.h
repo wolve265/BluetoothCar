@@ -26,6 +26,7 @@ public:
     void forward_left(int speed);
     void back_right(int speed);
     void back_left(int speed);
+    void stop();
 };
 
 #endif

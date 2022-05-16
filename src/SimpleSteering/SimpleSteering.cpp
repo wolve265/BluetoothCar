@@ -116,3 +116,8 @@ void SimpleSteering::back_left(int speed)
     _leftMotorDriver->SetSpeed(-speed);
 
 }
+
+void SimpleSteering::stop()
+{
+    this->forward(0);
+}

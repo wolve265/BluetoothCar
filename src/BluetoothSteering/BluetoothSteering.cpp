@@ -34,18 +34,18 @@ void BluetoothSteering::run()
     case RIGHT:
         this->right(_currentSpeed);
         break;
-    // case FORWARD_LEFT:
-        // this->TBD;
-        // break;
-    // case FORWARD_RIGHT:
-        // this->TBD;
-        // break;
-    // case BACK_LEFT:
-        // this->TBD;
-        // break;
-    // case BACK_RIGHT:
-        // this->TBD;
-        // break;
+    case FORWARD_LEFT:
+        this->forward_left(_currentSpeed);
+        break;
+    case FORWARD_RIGHT:
+        this->forward_right(_currentSpeed);
+        break;
+    case BACK_LEFT:
+        this->back_left(_currentSpeed);
+        break;
+    case BACK_RIGHT:
+        this->back_right(_currentSpeed);
+        break;
     case STOP:
         this->forward(0);
         break;

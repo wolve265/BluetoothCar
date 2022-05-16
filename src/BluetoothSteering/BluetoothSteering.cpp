@@ -26,13 +26,13 @@ void BluetoothSteering::run()
         this->forward(_currentSpeed);
         break;
     case BACK:
-        this->backward(_currentSpeed);
+        this->back(_currentSpeed);
         break;
     case LEFT:
-        this->turn_left(_currentSpeed);
+        this->left(_currentSpeed);
         break;
     case RIGHT:
-        this->turn_right(_currentSpeed);
+        this->right(_currentSpeed);
         break;
     // case FORWARD_LEFT:
         // this->TBD;

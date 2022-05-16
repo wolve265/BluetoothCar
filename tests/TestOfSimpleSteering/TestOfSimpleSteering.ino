@@ -9,10 +9,10 @@ void setup() {
 void loop() {
     simpleSteering.forward(150);
     delay(2000);
-    simpleSteering.backward(150);
+    simpleSteering.back(150);
     delay(2000);
-    simpleSteering.turn_right(150);
+    simpleSteering.right(150);
     delay(2000);
-    simpleSteering.turn_left(150);
+    simpleSteering.left(150);
     delay(2000);
 }

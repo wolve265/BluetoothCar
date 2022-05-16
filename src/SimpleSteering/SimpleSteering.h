@@ -18,9 +18,9 @@ public:
         );
     ~SimpleSteering();
     void forward(int speed);
-    void backward(int speed);
-    void turn_right(int speed);
-    void turn_left(int speed);
+    void back(int speed);
+    void right(int speed);
+    void left(int speed);
 };
 
 #endif

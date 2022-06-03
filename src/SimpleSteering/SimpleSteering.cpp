@@ -15,6 +15,17 @@ SimpleSteering::~SimpleSteering()
 {
 }
 
+///////////////////////////////////////////////////////////
+// This function moves car forward with provided speed
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//      int speed: speed value from -255 to 255
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void SimpleSteering::forward(int speed)
 {
     if (IsDebugOn())
@@ -27,6 +38,17 @@ void SimpleSteering::forward(int speed)
     _leftMotorDriver->SetSpeed(speed);
 }
 
+///////////////////////////////////////////////////////////
+// This function moves car back with provided speed
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//      int speed: speed value from -255 to 255
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void SimpleSteering::back(int speed)
 {
     if (IsDebugOn())
@@ -39,6 +61,17 @@ void SimpleSteering::back(int speed)
     _leftMotorDriver->SetSpeed(-speed);
 }
 
+///////////////////////////////////////////////////////////
+// This function moves car right with provided speed
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//      int speed: speed value from -255 to 255
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void SimpleSteering::right(int speed)
 {
     if (IsDebugOn())
@@ -52,6 +85,17 @@ void SimpleSteering::right(int speed)
 
 }
 
+///////////////////////////////////////////////////////////
+// This function moves car left with provided speed
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//      int speed: speed value from -255 to 255
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void SimpleSteering::left(int speed)
 {
     if (IsDebugOn())
@@ -65,6 +109,17 @@ void SimpleSteering::left(int speed)
 
 }
 
+///////////////////////////////////////////////////////////
+// This function moves car forward right with provided speed
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//      int speed: speed value from -255 to 255
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void SimpleSteering::forward_right(int speed)
 {
     if (IsDebugOn())
@@ -78,6 +133,17 @@ void SimpleSteering::forward_right(int speed)
 
 }
 
+///////////////////////////////////////////////////////////
+// This function moves car forward left with provided speed
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//      int speed: speed value from -255 to 255
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void SimpleSteering::forward_left(int speed)
 {
     if (IsDebugOn())
@@ -91,6 +157,17 @@ void SimpleSteering::forward_left(int speed)
 
 }
 
+///////////////////////////////////////////////////////////
+// This functionmoves car back right with provided speed
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//      int speed: speed value from -255 to 255
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void SimpleSteering::back_right(int speed)
 {
     if (IsDebugOn())
@@ -104,6 +181,17 @@ void SimpleSteering::back_right(int speed)
 
 }
 
+///////////////////////////////////////////////////////////
+// This function moves car back left with provided speed
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//      int speed: speed value from -255 to 255
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void SimpleSteering::back_left(int speed)
 {
     if (IsDebugOn())
@@ -117,6 +205,16 @@ void SimpleSteering::back_left(int speed)
 
 }
 
+///////////////////////////////////////////////////////////
+// This function stops the car
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void SimpleSteering::stop()
 {
     this->forward(0);

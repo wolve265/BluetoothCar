@@ -13,7 +13,18 @@ CommandDecoder::~CommandDecoder()
 {
 }
 
-// Blocking decoding of commands, because app is writing every 50ms
+///////////////////////////////////////////////////////////
+// This function decodes command received from app
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//
+// OUTPUT:
+//      Command command: decoded command
+//
+// REMARKS:
+//      This function is blocking,
+//      because app is writing every 50ms
 Command CommandDecoder::decode()
 {
     if (_bluetoothTransceiver->available() > 0)

@@ -4,6 +4,9 @@
 #include "src/Driver/Driver.h"
 #include "src/L298NMotorDriver/L298NMotorDriver.h"
 
+///////////////////////////////////////////////////////////
+// This class implements simple car steering
+///////////////////////////////////////////////////////////
 class SimpleSteering : public Driver
 {
 private:

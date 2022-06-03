@@ -37,6 +37,9 @@ typedef enum Command{
     STOP_ALL            = 'D'  // 'D'
 }Command;
 
+///////////////////////////////////////////////////////////
+// This class implements command from app decoding
+///////////////////////////////////////////////////////////
 class CommandDecoder : public Driver
 {
 private:

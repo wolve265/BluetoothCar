@@ -15,6 +15,18 @@ BluetoothSteering::~BluetoothSteering()
 {
 }
 
+///////////////////////////////////////////////////////////
+// This function runs the BluetoothSteering.
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//
+// OUTPUT:
+//
+// REMARKS:
+//      tutaj zapisujemy dodatkowe uwagi, np. dodatkowe
+//      opcje wywołań, specjalny format argumentów, itd.
+//
 void BluetoothSteering::run()
 {
     Command command;
@@ -115,6 +127,17 @@ void BluetoothSteering::run()
     }
 }
 
+///////////////////////////////////////////////////////////
+// This function sets the speed for steering.
+///////////////////////////////////////////////////////////
+//
+// INPUT:
+//      int speed: speed value from -255 to 255
+//
+// OUTPUT:
+//
+// REMARKS:
+//
 void BluetoothSteering::setSpeed(int speed)
 {
     _currentSpeed = speed;

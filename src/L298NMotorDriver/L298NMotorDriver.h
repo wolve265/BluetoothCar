@@ -4,6 +4,9 @@
 #include "Arduino.h"
 #include "src/Driver/Driver.h"
 
+///////////////////////////////////////////////////////////
+// This class implements L298N Motor Driver functionalities
+///////////////////////////////////////////////////////////
 class L298NMotorDriver : public Driver
 {
 private:

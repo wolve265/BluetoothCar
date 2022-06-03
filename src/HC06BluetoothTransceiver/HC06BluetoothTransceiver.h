@@ -4,6 +4,10 @@
 #include "SoftwareSerial.h"
 #include "src/Driver/Driver.h"
 
+///////////////////////////////////////////////////////////
+// This class implements HC06 Bluetooth Transceiver
+// functionalities and communication.
+///////////////////////////////////////////////////////////
 class HC06BluetoothTransceiver : public Driver
 {
 private:

@@ -4,6 +4,9 @@
 #include "src/CommandDecoder/CommandDecoder.h"
 #include "src/SimpleSteering/SimpleSteering.h"
 
+///////////////////////////////////////////////////////////
+// This class implements car steering via Bluetooth
+///////////////////////////////////////////////////////////
 class BluetoothSteering : public SimpleSteering
 {
 private:

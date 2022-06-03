@@ -19,3 +19,8 @@ We are using HC-06 Bluetooth Transceiver.
 We are using [Bluetooth RC Car mobile app](https://play.google.com/store/apps/details?id=braulio.calle.bluetoothRCcontroller&hl=pl&gl=US).
 
 ![App Preview](doc/img/app.png)
+
+
+## Documentation
+
+You can build documentation using [doxygen](https://www.doxygen.nl/) and provided `Doxyfile`
